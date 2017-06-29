@@ -4,11 +4,11 @@
 
 博客主要划分为下面几大模块：
 
-* [Java Web](https://github.com/johnnian/Johnnian/projects/1)
-* [分布式架构](https://github.com/johnnian/Johnnian/projects/2)
-* [数据库](https://github.com/johnnian/Johnnian/projects/3)
-* [开发工具](https://github.com/johnnian/Johnnian/projects/4)
-* [客户端Apps](https://github.com/johnnian/Johnnian/projects/5)
+* [Java Web](https://github.com/johnnian/Blog/projects/1)
+* [分布式架构](https://github.com/johnnian/Blog/projects/2)
+* [数据库](https://github.com/johnnian/Blog/projects/3)
+* [开发工具](https://github.com/johnnian/Blog/projects/4)
+* [客户端Apps](https://github.com/johnnian/Blog/projects/5)
 
 
 ### 关于我
