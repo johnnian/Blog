@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+### 简介
 
-You can use the [editor on GitHub](https://github.com/johnnian/Johnnian/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+折腾过挺多博客的，发现直接用Github的 Issues + Projects，写技术博客能够更加专心，后面就持续在此更新博客了～
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+博客主要划分为下面几大模块：
 
-### Markdown
+* [Java Web](https://github.com/johnnian/Johnnian/projects/1)
+* [分布式架构](https://github.com/johnnian/Johnnian/projects/2)
+* [数据库](https://github.com/johnnian/Johnnian/projects/3)
+* [开发工具](https://github.com/johnnian/Johnnian/projects/4)
+* [客户端Apps](https://github.com/johnnian/Johnnian/projects/5)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### 关于我
 
-# Header 1
-## Header 2
-### Header 3
+基督徒、喜欢乐器(吉他、电子琴)、一枚软件开发攻城狮～
 
-- Bulleted
-- List
+专注于：Java Web开发、分布式架构研究以及大数据技术；
 
-1. Numbered
-2. List
+业余爱折腾：移动端的开发（玩过iOS），目前有空的时候，会做一些微信小程序的开发；
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/johnnian/Johnnian/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
