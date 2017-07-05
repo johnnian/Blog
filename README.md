@@ -9,7 +9,7 @@
 * [数据库](https://github.com/johnnian/Blog/projects/3)
 * [开发工具](https://github.com/johnnian/Blog/projects/4)
 * [客户端Apps](https://github.com/johnnian/Blog/projects/5)
-
+* [读书笔记](https://github.com/johnnian/Blog/projects/6)
 
 ### 关于我
 
