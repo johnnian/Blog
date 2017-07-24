@@ -11,6 +11,7 @@
 * [客户端Apps](https://github.com/johnnian/Blog/projects/5)
 * [读书笔记](https://github.com/johnnian/Blog/projects/6)
 * [Linux & Docker](https://github.com/johnnian/Blog/projects/7)
+* [大数据技术](https://github.com/johnnian/Blog/projects/8)
 
 ### 关于我
 
