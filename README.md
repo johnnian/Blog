@@ -2,7 +2,9 @@
 
 折腾过挺多博客的，发现直接用Github的 Issues + Projects，写技术博客能够更加专心，后面就持续在此更新博客了～
 
-博客主要划分为下面几大模块：
+### 博客分类
+
+博客主要划分为下面几大类别：
 
 * [Java Web](https://github.com/johnnian/Blog/projects/1)
 * [分布式架构](https://github.com/johnnian/Blog/projects/2)
@@ -13,9 +15,36 @@
 * [Linux & Docker](https://github.com/johnnian/Blog/projects/7)
 * [大数据技术](https://github.com/johnnian/Blog/projects/8)
 
+### 主要系列文章
+
+**1、工具安装**
+
+- [CentOS6.8 安装 RebbitMQ](https://github.com/johnnian/Blog/issues/7)
+- [生产环境部署MongoDB副本集(带keyfile安全认证以及用户权限)](https://github.com/johnnian/Blog/issues/8)
+- [生产环境部署Redis Cluster集群](https://github.com/johnnian/Blog/issues/9)
+- [Redis安装、配置及使用(单机版) ](https://github.com/johnnian/Blog/issues/2)
+- [CentOS 6 配置：Keepalived + Nginx ](https://github.com/johnnian/Blog/issues/19)
+- [H2数据库安装与使用(单点) ](https://github.com/johnnian/Blog/issues/24)
+- [H2数据库集群搭建(主从结构)](https://github.com/johnnian/Blog/issues/26)
+- [Zookeeper安装部署（单点／集群）](https://github.com/johnnian/Blog/issues/25)
+- [Supervisor 安装使用](https://github.com/johnnian/Blog/issues/27)
+
+
+**2、Storm实时计算**
+
+- [Storm实战—基本概念](https://github.com/johnnian/Blog/issues/21)
+- [Storm实战—安装部署](https://github.com/johnnian/Blog/issues/22)
+- [Storm实战—任务部署与调度](https://github.com/johnnian/Blog/issues/23)
+
+**3、Kubernetes**
+
+- [Kubernetes—简介以及部署方案](https://github.com/johnnian/Blog/issues/30)
+
+
+
 ### 关于我
 
-基督徒、喜欢乐器(吉他、电子琴)、一枚软件开发攻城狮～
+基督徒、喜欢乐器(吉他、电子琴、非洲鼓等)、一枚软件开发攻城狮～
 
 专注于：Java Web开发、分布式架构研究以及大数据技术；
 
