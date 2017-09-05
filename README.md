@@ -39,7 +39,7 @@
 **3、Kubernetes**
 
 - [Kubernetes—简介以及部署方案](https://github.com/johnnian/Blog/issues/30)
-
+- [Kubernetes—使用Minikube搭建Nginx集群](https://github.com/johnnian/Blog/issues/32)
 
 
 ### 关于我
