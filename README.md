@@ -28,7 +28,7 @@
 - [H2数据库集群搭建(主从结构)](https://github.com/johnnian/Blog/issues/26)
 - [Zookeeper安装部署（单点／集群）](https://github.com/johnnian/Blog/issues/25)
 - [Supervisor 安装使用](https://github.com/johnnian/Blog/issues/27)
-
+- [CentOS 安装 Ruby 2.3.0](https://github.com/johnnian/Blog/issues/33)
 
 **2、Storm实时计算**
 
