@@ -8,10 +8,10 @@
   </appender>
   
    <appender name="topiconeappender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <file>/Users/Johnnian/tmp/logs/topicone.log</file>
+    <file>/root/logs/topicone.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- daily rollover -->
-      <fileNamePattern>/Users/Johnnian/tmp/logs/topicone.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <fileNamePattern>/root/logs/topicone.%d{yyyy-MM-dd}.log</fileNamePattern>
       <!-- keep 30 days' worth of history capped at 3GB total size -->
       <maxHistory>90</maxHistory>
     </rollingPolicy>
@@ -21,10 +21,10 @@
   </appender>
 
   <appender name="topictwoappender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <file>/Users/Johnnian/tmp/logs/topictwo.log</file>
+    <file>/root/logs/topictwo.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- daily rollover -->
-      <fileNamePattern>/Users/Johnnian/tmp/logs/topictwo.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <fileNamePattern>/root/logs/topictwo.%d{yyyy-MM-dd}.log</fileNamePattern>
       <!-- keep 30 days' worth of history capped at 3GB total size -->
       <maxHistory>90</maxHistory>
     </rollingPolicy>
