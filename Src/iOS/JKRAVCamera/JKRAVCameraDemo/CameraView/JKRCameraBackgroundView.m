@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSOperationQueue *queue;
 @property (strong, nonatomic) NSString *filePath;
 @property (strong, nonatomic) NSFileHandle* fileHandle;
+@property (strong, nonatomic) NSString* timeStr;
 
 @end
 
@@ -98,6 +99,12 @@
     _focusSilder.value = 0.0;
     [_focusSilder addTarget:self action:@selector(changeFocus:) forControlEvents:UIControlEventValueChanged];
     
+    //手动对焦值
+    _focusLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width-170, 40, 50, 10)];
+    [_focusLabel setTextColor:[UIColor redColor]];
+    [_focusLabel setFont:[UIFont systemFontOfSize:13]];
+    [_focusLabel setText:@"0.0"];
+    
     _zoomSilder = [[UISlider alloc] initWithFrame:CGRectMake(frame.size.width - 250, 100, 200, 20)];
     [self setSider:_zoomSilder withText:@"焦距调节"];
     _zoomSilder.minimumValue = 1.0;
@@ -105,6 +112,12 @@
     _zoomSilder.value = 1.0;
     _zoomValue = _zoomSilder.value;
     [_zoomSilder addTarget:self action:@selector(changeZoom:) forControlEvents:UIControlEventValueChanged];
+    //焦距值
+    _zoomLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width-170, 90, 50, 10)];
+    [_zoomLabel setTextColor:[UIColor redColor]];
+    [_zoomLabel setFont:[UIFont systemFontOfSize:13]];
+    [_zoomLabel setText:@"0.0"];
+    
     
     _isoSilder = [[UISlider alloc] initWithFrame:CGRectMake(frame.size.width - 250, 150, 200, 20)];
     [self setSider:_isoSilder withText:@"感光度调节"];
@@ -112,6 +125,12 @@
     _isoSilder.maximumValue = 1.0;
     _isoSilder.value = 0.0;
     [_isoSilder addTarget:self action:@selector(changeISO:) forControlEvents:UIControlEventValueChanged];
+    //感光值
+    _isoLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width-160, 140, 50, 10)];
+    [_isoLabel setTextColor:[UIColor redColor]];
+    [_isoLabel setFont:[UIFont systemFontOfSize:13]];
+    [_isoLabel setText:@"0.0"];
+
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureRecognizerAction:)];
     [self addGestureRecognizer:pinchGestureRecognizer];
@@ -120,8 +139,11 @@
     [self addSubview:_flashButton];
     [self addSubview:_frontAndBackChange];
     [self addSubview:_focusSilder];
+    [self addSubview:_focusLabel];
     [self addSubview:_zoomSilder];
+    [self addSubview:_zoomLabel];
     [self addSubview:_isoSilder];
+    [self addSubview:_isoLabel];
     [self addSubview:_playButton];
     [self addSubview:_saveButton];
     [self addSubview:_deleteButton];
@@ -130,20 +152,21 @@
     [self addSubview:_slowButton];
     [self addSubview:_antiShakeButton];
     
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerAction:)];
-    tapGestureRecognizer.numberOfTouchesRequired = 1;
-    tapGestureRecognizer.numberOfTapsRequired = 1;
-    [self addGestureRecognizer:tapGestureRecognizer];
+// 屏幕自动对焦功能
+//    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerAction:)];
+//    tapGestureRecognizer.numberOfTouchesRequired = 1;
+//    tapGestureRecognizer.numberOfTapsRequired = 1;
+//    [self addGestureRecognizer:tapGestureRecognizer];
     
-    _focusLayer = [[CAShapeLayer alloc] init];
-    _focusLayer.lineWidth = 4;
-    _focusLayer.strokeColor = [UIColor orangeColor].CGColor;
-    _focusLayer.fillColor = [UIColor clearColor].CGColor;
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 100, 100)];
-    [path closePath];
-    _focusLayer.path = path.CGPath;
-    [self.layer addSublayer:_focusLayer];
-    _focusLayer.hidden = YES;
+//    _focusLayer = [[CAShapeLayer alloc] init];
+//    _focusLayer.lineWidth = 4;
+//    _focusLayer.strokeColor = [UIColor orangeColor].CGColor;
+//    _focusLayer.fillColor = [UIColor clearColor].CGColor;
+//    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 100, 100)];
+//    [path closePath];
+//    _focusLayer.path = path.CGPath;
+//    [self.layer addSublayer:_focusLayer];
+//    _focusLayer.hidden = YES;
     
     _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height - 45, frame.size.width, 45)];
     _timeLabel.backgroundColor = [UIColor clearColor];
@@ -251,9 +274,7 @@
         NSLog(@"played");
         
         [self startGyroUpdatesToQueue];
-        
-        
-        [self.delegate cameraBackgroundDidClickPlay];
+        [self.delegate cameraBackgroundDidClickPlayWith:_timeStr];
         _deleteHasClick = NO;
         [_progressView start];
         if (_isFront) _frontAndBackChange.selected = NO;
@@ -359,6 +380,7 @@
     NSString *currentTimeString = [formatter stringFromDate:datenow];
     NSString *fileName = [NSString stringWithFormat:@"%@.csv",currentTimeString];
     
+    _timeStr = currentTimeString; // 保存时间
     _filePath = [homePath stringByAppendingPathComponent:fileName];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -378,7 +400,7 @@
 -(void)writeCSVData:(double) x with:(double) y with:(double) z {
     
    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"YYYYMMddHHmmssSSS"];
+    [formatter setDateFormat:@"HHmmssSSS"];
     NSDate *datenow = [NSDate date];
     NSString *currentTimeString = [formatter stringFromDate:datenow];
     
@@ -432,6 +454,7 @@
 #pragma mark - 改变焦距
 - (void)changeFocus:(UISlider *)sender {
     [self.delegate cameraBackgroundDidChangeFocus:sender.value];
+    [_focusLabel setText:[NSString stringWithFormat:@"%.01f", sender.value]];
 }
 
 #pragma mark - 改变取景框
@@ -439,11 +462,13 @@
     NSLog(@"%f", sender.value);
     _zoomValue = sender.value;
     [self.delegate cameraBackgroundDidChangeZoom:sender.value];
+    [_zoomLabel setText:[NSString stringWithFormat:@"%.01f", sender.value]];
 }
 
 #pragma mark - 改变ISO
 - (void)changeISO:(UISlider *)sender {
     [self.delegate cameraBackgroundDidChangeISO:sender.value];
+    [_isoLabel setText:[NSString stringWithFormat:@"%.01f", sender.value]];
 }
 
 #pragma mark - 捏合屏幕改变焦距

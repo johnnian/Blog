@@ -20,7 +20,7 @@
 - (void)cameraBackgroundDidChangeZoom:(CGFloat)zoom;
 - (void)cameraBackgroundDidChangeISO:(CGFloat)iso;
 - (void)cameraBackgroundDidTap:(CGPoint)point;
-- (void)cameraBackgroundDidClickPlay;
+- (void)cameraBackgroundDidClickPlayWith:(NSString *)timeStr;
 - (void)cameraBackgroundDidClickPause;
 - (void)cameraBackgroundDidClickSave;
 - (void)cameraBackgroundDidClickDeleteCompleted:(void(^)())completed;
@@ -57,6 +57,13 @@
 @property (nonatomic, assign) CGFloat zoomValue;
 @property (nonatomic, strong) CAShapeLayer *focusLayer;
 @property (nonatomic, strong) UILabel *timeLabel;
+
+@property (nonatomic, strong) UILabel *focusLabel;
+@property (nonatomic, strong) UILabel *zoomLabel;
+@property (nonatomic, strong) UILabel *isoLabel;
+
+@property (nonatomic, strong) NSString *csvFileName;    //csv文件的前缀
+
 
 @property (nonatomic, assign) BOOL deleteHasClick;
 @property (nonatomic, strong) JKRCameraProgressView *progressView;

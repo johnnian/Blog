@@ -25,6 +25,7 @@ typedef void(^setVideoSpeedBlock)();
 @property (nonatomic) CMTime defaultMinFrameDuration;
 @property (nonatomic) CMTime defaultMaxFrameDuration;
 
+
 /// 负责输入和输出设备之间的数据传递
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 /// 负责从AVCaptureDevice获得视频输入流
@@ -47,6 +48,9 @@ typedef void(^setVideoSpeedBlock)();
 @property (nonatomic, assign) NSInteger index;
 /// 视频速度处理完成回调
 @property (nonatomic, copy) setVideoSpeedBlock setVideoSpeedBlock;
+
+@property (nonatomic, strong) NSString *timeStr;
+
 
 @end
 
@@ -291,16 +295,18 @@ typedef void(^setVideoSpeedBlock)();
 }
 
 #pragma mark - 录制
-- (void)cameraBackgroundDidClickPlay {
+- (void)cameraBackgroundDidClickPlayWith:(NSString *)timestr {
     // 根据设备输出获得连接
 //    AVCaptureConnection *captureConnection = [self.captureMovieFileOutput connectionWithMediaType:AVMediaTypeVideo];
     // 根据连接取得设备输出的数据
     if (![self.captureMovieFileOutput isRecording]) {
    //        captureConnection.videoOrientation = (AVCaptureVideoOrientation)_deviceOrientation; // 视频方向和手机方向一致
+        _timeStr = timestr;
         NSString *outputFilePath = [kCachePath stringByAppendingPathComponent:[self movieName]];
         NSURL *fileURL = [NSURL fileURLWithPath:outputFilePath];
         [self.captureMovieFileOutput startRecordingToOutputFileURL:fileURL recordingDelegate:self];
         _currentMoviePath = outputFilePath;
+        
     }
 }
 
@@ -732,7 +738,7 @@ typedef void(^setVideoSpeedBlock)();
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"YYYYMMddHHmmssSSS"];
     NSDate *datenow = [NSDate date];
-    NSString *currentTimeString = [formatter stringFromDate:datenow];
+    NSString *currentTimeString =[NSString stringWithFormat:@"%@",_timeStr];
     return [currentTimeString stringByAppendingString:@".MOV"];
 }
 
