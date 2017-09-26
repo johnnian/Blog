@@ -273,7 +273,7 @@
     if (_playButton.selected) {
         NSLog(@"played");
         
-        [self startGyroUpdatesToQueue];
+        [self startSensorUpdates];
         [self.delegate cameraBackgroundDidClickPlayWith:_timeStr];
         _deleteHasClick = NO;
         [_progressView start];
@@ -291,7 +291,7 @@
     } else {
         NSLog(@"paused");
         
-        [self stopGyroUpdatesToQueue];
+        [self stopSensorUpdates];
         
         if (_isFront) _frontAndBackChange.selected = YES;
         _frontAndBackChange.enabled = YES;
@@ -312,23 +312,36 @@
 #pragma mark - 保存视频
 - (void)save {
     [self.delegate cameraBackgroundDidClickSave];
-    
-    [self savestartGyroData];
+    [self saveSensorData];
 }
 
 
 
 #pragma mark -螺旋仪器操作
 
-- (void)startGyroUpdatesToQueue {
-
-    NSLog(@"开启了螺旋仪...");
-    //判断陀螺仪可不可以，判断陀螺仪是不是开启
+- (void)startSensorUpdates {
+    
+    //判断加速度计是否开启
+    if ([_motionManager isAccelerometerAvailable] && ![_motionManager isAccelerometerActive]){
+        //告诉manager，更新频率是100Hz
+        _motionManager.accelerometerUpdateInterval = 0.01;
+        //开始更新，后台线程开始运行。这是Pull方式。
+        [_motionManager startAccelerometerUpdates];
+    }
+    
+    //判断磁盘计是否开启
+    if ([_motionManager isMagnetometerAvailable] && ![_motionManager isMagnetometerActive]){
+        //告诉manager，更新频率是100Hz
+        _motionManager.magnetometerUpdateInterval = 0.01;
+        //开始更新，后台线程开始运行。这是Pull方式。
+        [_motionManager startMagnetometerUpdates];
+    }
+    
+    //判断陀螺仪是否开启
     if ([_motionManager isGyroAvailable] && ![_motionManager isGyroActive]){
         
         //创建CVS文件
         [self createFile];
-        
         //告诉manager，更新频率是100Hz
         _motionManager.gyroUpdateInterval = 0.01;
         
@@ -338,27 +351,34 @@
         [_motionManager startGyroUpdatesToQueue:_queue
                              withHandler:^(CMGyroData *gyroData, NSError *error)
          {
-             NSLog(@"Gyro Rotation x = %.04f", gyroData.rotationRate.x);
-             NSLog(@"Gyro Rotation y = %.04f", gyroData.rotationRate.y);
-             NSLog(@"Gyro Rotation z = %.04f", gyroData.rotationRate.z);
-             
-             [weakSelf writeCSVData:gyroData.rotationRate.x with:gyroData.rotationRate.y with:gyroData.rotationRate.z];
-             
+             //获取并处理加速度计数据
+             CMAccelerometerData *accelerometerData = weakSelf.motionManager.accelerometerData;
+             CMMagnetometerData *magnetometerData = weakSelf.motionManager.magnetometerData;
+             [weakSelf writeCSVData:gyroData with:accelerometerData with:magnetometerData];
          }];
     }
 }
 
-- (void)stopGyroUpdatesToQueue {
+- (void)stopSensorUpdates {
     
-    NSLog(@"关闭了螺旋仪...");
-    //判断陀螺仪可不可以，判断陀螺仪是不是开启
+    //判断并且暂停加速度计
+    if ([_motionManager isAccelerometerAvailable] && [_motionManager isAccelerometerActive]){
+        [_motionManager stopAccelerometerUpdates];
+    }
+    
+    //判断并且暂停磁盘计
+    if ([_motionManager isMagnetometerAvailable] && [_motionManager isMagnetometerActive]){
+        [_motionManager stopMagnetometerUpdates];
+    }
+    
+    //判断并且暂停陀螺仪
     if ([_motionManager isGyroAvailable] && [_motionManager isGyroActive]){
-        //Push方式获取和处理数据
         [_motionManager stopGyroUpdates];
     }
 }
 
-- (void)savestartGyroData {
+//保存传感器的数据
+- (void)saveSensorData {
     
     if (_fileHandle != nil) {
         
@@ -387,7 +407,7 @@
     
     if(![fileManager fileExistsAtPath:_filePath]) //如果不存在
     {
-        NSString *str = [NSString stringWithFormat:@"陀螺仪数据生成时间：%@， 格式如下：\n 时间, X, Y, Z\n",currentTimeString];
+        NSString *str = [NSString stringWithFormat:@"时间(更新频率100Hz), 陀螺仪-X, 陀螺仪-Y, 陀螺仪-Z, 加速度计-X, 加速度计-Y, 加速度计-Z, 磁盘计-X, 磁盘计-Y, 磁盘计-Z \n"];
         [str writeToFile:_filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     
@@ -397,22 +417,20 @@
 }
 
 
--(void)writeCSVData:(double) x with:(double) y with:(double) z {
+-(void)writeCSVData:(CMGyroData*) gyroData with:(CMAccelerometerData*)accelerometerData with:(CMMagnetometerData *)magnetometerData {
     
    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HHmmssSSS"];
+    [formatter setDateFormat:@"HH:mm:ss.SSS"];
     NSDate *datenow = [NSDate date];
     NSString *currentTimeString = [formatter stringFromDate:datenow];
     
-    
-
-    NSString *str = [NSString stringWithFormat:@"%@, %.04f,%.04f,%.04f\n", currentTimeString, x, y, z];
+    NSString *str = [NSString stringWithFormat:@"%@, %.04f,%.04f,%.04f,%.04f,%.04f,%.04f,%.04f,%.04f,%.04f\n",
+                     currentTimeString, gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z,
+                     accelerometerData.acceleration.x, accelerometerData.acceleration.y, accelerometerData.acceleration.z, magnetometerData.magneticField.x, magnetometerData.magneticField.y, magnetometerData.magneticField.z ];
     
     NSData *stringData = [str dataUsingEncoding:NSUTF8StringEncoding];
     //追加写入数据
     [_fileHandle writeData:stringData];
-
-    
 }
 
 
