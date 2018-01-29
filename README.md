@@ -17,10 +17,10 @@
 
 ### 主要系列文章
 
-**1、工具安装**
+**1、工具**
 
 - [CentOS6.8 安装 RebbitMQ](https://github.com/johnnian/Blog/issues/7)
-- [生产环境部署MongoDB副本集(带keyfile安全认证以及用户权限)](https://github.com/johnnian/Blog/issues/8)
+- [MongoDB 副本集部署-3.6版本](https://github.com/johnnian/Blog/issues/8)
 - [生产环境部署Redis Cluster集群](https://github.com/johnnian/Blog/issues/9)
 - [Redis安装、配置及使用(单机版) ](https://github.com/johnnian/Blog/issues/2)
 - [CentOS 6 配置：Keepalived + Nginx ](https://github.com/johnnian/Blog/issues/19)
@@ -31,6 +31,7 @@
 - [CentOS 安装 Ruby 2.3.0](https://github.com/johnnian/Blog/issues/33)
 - [日志收集系统(Flume-NG & Kafaka) ](https://github.com/johnnian/Blog/issues/34)
 - [Docker容器—HBase安装](https://github.com/johnnian/Blog/issues/38)
+- [autossh内外网穿透方法](https://github.com/johnnian/Blog/issues/43)
 
 
 **2、Storm实时计算**
@@ -55,6 +56,7 @@
 
 - [SpringBoot系列之—Web开发实战](https://github.com/johnnian/Blog/issues/39)
 - [SpringBoot系列之—瘦身部署](https://github.com/johnnian/Blog/issues/41)
+- [SpringBoot系列之—日志打印的问题(经验总结)](https://github.com/johnnian/Blog/issues/42)
 
 
 ### 关于我
@@ -63,6 +65,6 @@
 
 专注于：Java Web开发、分布式架构研究以及大数据技术；
 
-业余爱折腾：移动端的开发（玩过iOS），目前有空的时候，会做一些微信小程序的开发；
+业余爱折腾：移动端的开发（玩过iOS），会做一些微信小程序的开发；
 
 

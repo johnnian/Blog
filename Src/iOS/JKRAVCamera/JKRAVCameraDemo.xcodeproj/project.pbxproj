@@ -300,6 +300,7 @@
 		43CEEB4A1D792BDC00B6C237 /* JKRVideoBackGroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRVideoBackGroundView.m; sourceTree = "<group>"; };
 		43CEEB4C1D79862D00B6C237 /* back.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = back.mp3; sourceTree = "<group>"; };
 		FA3CD00A1F7143D1005A0CCD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FA8D331B201EA6F500CF282A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -653,6 +654,7 @@
 		FA3CD0091F7143D0005A0CCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA8D331B201EA6F500CF282A /* SystemConfiguration.framework */,
 				FA3CD00A1F7143D1005A0CCD /* CoreMotion.framework */,
 			);
 			name = Frameworks;
@@ -981,6 +983,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/JKRAVCameraDemo/GUImage",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnnian.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1002,6 +1005,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/JKRAVCameraDemo/GUImage",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnnian.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
