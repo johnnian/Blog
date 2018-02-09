@@ -29,10 +29,11 @@
 - [Zookeeper安装部署（单点／集群）](https://github.com/johnnian/Blog/issues/25)
 - [Supervisor 安装使用](https://github.com/johnnian/Blog/issues/27)
 - [CentOS 安装 Ruby 2.3.0](https://github.com/johnnian/Blog/issues/33)
-- [日志收集系统(Flume-NG & Kafaka) ](https://github.com/johnnian/Blog/issues/34)
 - [Docker容器—HBase安装](https://github.com/johnnian/Blog/issues/38)
 - [autossh内外网穿透方法](https://github.com/johnnian/Blog/issues/43)
-
+- [SSH使用问题以及解决方案(expecting SSH2_MSG_KEX_ECDH_REPLY) ](https://github.com/johnnian/Blog/issues/44)
+- [日志服务—使用Flume-NG/Kafaka搭建日志搜集服务 ](https://github.com/johnnian/Blog/issues/34)
+- [日志服务—阿里云日志服务使用记录](https://github.com/johnnian/Blog/issues/46)
 
 **2、Storm实时计算**
 
