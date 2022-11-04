@@ -119,6 +119,7 @@ def bundle_list_by_labels_section():
 <summary>%s\t[%s篇文章]</summary>
 
 %s
+
 </details>
             ''' % (label.name, count, temp)
 
