@@ -1,4 +1,4 @@
-name: CI
+name: auto-update-readme-by-issue
 on:
   issues:
     types: [opened, edited, milestoned,deleted,pinned,unpinned,closed,reopened,labeled,unlabeled]
