@@ -1,19 +1,24 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2022-11-04 18:18:24"/>
+    <img src="https://badgen.net/badge/last-commit/2022-11-04 18:25:59"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
-    <a href="https://github.com/jwenjian/visitor-count-badge">
-        <img src="https://visitor-badge.glitch.me/badge?page_id=johnnian./Blog"/>
-    </a>
 </p>
     
 <summary>
     <img src="assets/wordcloud.png" title="词云" alt="词云">
 </summary>  
 
+<details>
+<summary>AI	[1篇文章]</summary>
+
+- [Keras入门—Hello,World](https://github.com/johnnian/Blog/issues/69)  [0 条评论]  	 
+
+
+</details>
+            
 <details>
 <summary>Apps	[1篇文章]</summary>
 
