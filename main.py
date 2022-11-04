@@ -51,7 +51,7 @@ def bundle_summary_section():
 
 def format_issue(issue: Issue):
     return '- [%s](%s)  %s  \t \n' % (
-        issue.title, issue.html_url, sup('%s :speech_balloon:' % issue.comments))
+        issue.title, issue.html_url, sup('%s 条评论' % issue.comments))
 
 
 def sup(text: str):
@@ -124,7 +124,7 @@ def bundle_list_by_labels_section():
         if count > 0:
             list_by_labels_section += '''
 <details>
-<summary>%s\t<sup>%s:newspaper:</sup></summary>
+<summary>%s\t<sup>(%s 篇文章)</sup></summary>
 
 %s
 </details>
