@@ -19,8 +19,9 @@ blogname : str
 def login():
     global user, username, blogname, ghiblog
     github_repo_env = os.environ.get('GITHUB_REPOSITORY')
+
     username = github_repo_env[0:github_repo_env.index('/')]
-    blogname = github_repo_env[1:github_repo_env.index('/')]
+    blogname = github_repo_env[github_repo_env.index('/'):]
     password = os.environ.get('GITHUB_TOKEN')
     user = Github(username, password)
     ghiblog = user.get_repo(os.environ.get('GITHUB_REPOSITORY'))
