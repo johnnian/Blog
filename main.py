@@ -17,7 +17,7 @@ cur_time : str
 blogname : str
 
 def login():
-    global user, username, ghiblog
+    global user, username, blogname, ghiblog
     github_repo_env = os.environ.get('GITHUB_REPOSITORY')
     username = github_repo_env[0:github_repo_env.index('/')]
     blogname = github_repo_env[1:github_repo_env.index('/')]
@@ -151,7 +151,7 @@ def execute():
 
     contents = [summary_section,list_by_labels_section]
     update_readme_md_file(contents)
-    
+
     print('README.md updated successfully!!!')
 
 if __name__ == '__main__':
