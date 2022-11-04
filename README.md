@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2022-11-04 18:25:59"/>
+    <img src="https://badgen.net/badge/last-commit/2022-11-04 18:30:53"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -11,15 +11,7 @@
     <img src="assets/wordcloud.png" title="词云" alt="词云">
 </summary>  
 
-<details>
-<summary>AI	[1篇文章]</summary>
-
-- [Keras入门—Hello,World](https://github.com/johnnian/Blog/issues/69)  [0 条评论]  	 
-
-
-</details>
-            
-<details>
+<details open>
 <summary>Apps	[1篇文章]</summary>
 
 - [iOS开发入门](https://github.com/johnnian/Blog/issues/4)  [0 条评论]  	 
@@ -27,7 +19,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Databases	[6篇文章]</summary>
 
 - [H2数据库集群搭建(主从结构)](https://github.com/johnnian/Blog/issues/26)  [0 条评论]  	 
@@ -40,7 +32,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Docker	[6篇文章]</summary>
 
 - [ Docker容器—CentOS中文乱码/时区混乱问题](https://github.com/johnnian/Blog/issues/70)  [0 条评论]  	 
@@ -53,7 +45,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Guitar	[1篇文章]</summary>
 
 - [乐理知识系列之和弦](https://github.com/johnnian/Blog/issues/54)  [8 条评论]  	 
@@ -61,7 +53,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Java Web	[11篇文章]</summary>
 
 - [Springboot系列之—war包部署&配置文件分离](https://github.com/johnnian/Blog/issues/59)  [0 条评论]  	 
@@ -79,7 +71,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>keras	[1篇文章]</summary>
 
 - [Keras入门—Hello,World](https://github.com/johnnian/Blog/issues/69)  [0 条评论]  	 
@@ -87,7 +79,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Linux	[12篇文章]</summary>
 
 - [ Redhat 6 ：This system is not registered to Red Hat Subscription Management](https://github.com/johnnian/Blog/issues/56)  [0 条评论]  	 
@@ -106,7 +98,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>MongoDB	[1篇文章]</summary>
 
 - [MongoDB 副本集部署-3.6版本](https://github.com/johnnian/Blog/issues/8)  [1 条评论]  	 
@@ -114,7 +106,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>MySQL	[1篇文章]</summary>
 
 - [Connector/Python安装—使用Python连接MySQL](https://github.com/johnnian/Blog/issues/55)  [0 条评论]  	 
@@ -122,7 +114,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Python	[3篇文章]</summary>
 
 - [Python系列之—Web脚手架(flask+gunicorn+守护进程)](https://github.com/johnnian/Blog/issues/63)  [0 条评论]  	 
@@ -132,7 +124,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>RabbitMQ	[1篇文章]</summary>
 
 - [CentOS6.8 安装 RebbitMQ](https://github.com/johnnian/Blog/issues/7)  [0 条评论]  	 
@@ -140,7 +132,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Redis	[1篇文章]</summary>
 
 - [生产环境部署Redis Cluster集群](https://github.com/johnnian/Blog/issues/9)  [0 条评论]  	 
@@ -148,7 +140,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>SpringBoot	[3篇文章]</summary>
 
 - [SpringBoot系列之—日志打印的问题(经验总结)](https://github.com/johnnian/Blog/issues/42)  [0 条评论]  	 
@@ -158,7 +150,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Storm	[3篇文章]</summary>
 
 - [Storm实战—任务部署与调度](https://github.com/johnnian/Blog/issues/23)  [0 条评论]  	 
@@ -168,7 +160,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>Tools	[16篇文章]</summary>
 
 - [开发工具系列之—GoAcess:Nginx日志分析利器](https://github.com/johnnian/Blog/issues/68)  [0 条评论]  	 
@@ -191,7 +183,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>区块链	[1篇文章]</summary>
 
 - [区块链学习—Hyberledger Fabric 网络搭建入门](https://github.com/johnnian/Blog/issues/71)  [0 条评论]  	 
@@ -199,7 +191,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>大数据	[4篇文章]</summary>
 
 - [Docker容器—HBase安装](https://github.com/johnnian/Blog/issues/38)  [3 条评论]  	 
@@ -210,7 +202,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>机器学习	[1篇文章]</summary>
 
 - [机器学习算法系列—介绍](https://github.com/johnnian/Blog/issues/65)  [0 条评论]  	 
@@ -218,7 +210,7 @@
 
 </details>
             
-<details>
+<details open>
 <summary>读书笔记	[1篇文章]</summary>
 
 - [《微服务文集 (ThoughtWorks洞见)》](https://github.com/johnnian/Blog/issues/18)  [1 条评论]  	 
