@@ -113,7 +113,7 @@ def bundle_list_by_labels_section():
             count += 1
         if count > 0:
             list_by_labels_section += '''
-<details>
+<details open>
 <summary>%s\t[%s篇文章]</summary>
 
 %s
