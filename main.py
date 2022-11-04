@@ -42,9 +42,6 @@ def bundle_summary_section():
     <img src="https://badgen.net/github/forks/{0}/{1}"/>
     <img src="https://badgen.net/github/stars/{0}/{1}"/>
     <img src="https://badgen.net/github/watchers/{0}/{1}"/>
-    <a href="https://github.com/jwenjian/visitor-count-badge">
-        <img src="https://visitor-badge.glitch.me/badge?page_id={0}.{1}"/>
-    </a>
 </p>
     '''.format(username, blogname, cur_time)
     return summary_section
