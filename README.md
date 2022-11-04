@@ -1,12 +1,12 @@
 
 <p align='center'>
-    <img src="https://badgen.net/github/issues/johnnian/Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2022-11-05 01:25:38"/>
-    <img src="https://badgen.net/github/forks/johnnian/Blog"/>
-    <img src="https://badgen.net/github/stars/johnnian/Blog"/>
-    <img src="https://badgen.net/github/watchers/johnnian/Blog"/>
+    <img src="https://badgen.net/github/issues/johnnian/ohnnian"/>
+    <img src="https://badgen.net/badge/last-commit/2022-11-04 17:48:29"/>
+    <img src="https://badgen.net/github/forks/johnnian/ohnnian"/>
+    <img src="https://badgen.net/github/stars/johnnian/ohnnian"/>
+    <img src="https://badgen.net/github/watchers/johnnian/ohnnian"/>
     <a href="https://github.com/jwenjian/visitor-count-badge">
-        <img src="https://visitor-badge.glitch.me/badge?page_id=johnnian.Blog"/>
+        <img src="https://visitor-badge.glitch.me/badge?page_id=johnnian.ohnnian"/>
     </a>
 </p>
     
