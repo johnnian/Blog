@@ -30,7 +30,7 @@ jobs:
         git commit -m "Update from Github Action"
     - name: push change
       env:
-        GITHUB_LOGIN: jwenjian
+        GITHUB_LOGIN: johnnian
         GITHUB_TOKEN: ${{ secrets.BLOG_SECRET }}
       run: |
         git push https://$GITHUB_LOGIN:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
