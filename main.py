@@ -12,24 +12,24 @@ from word_cloud import WordCloudGenerator
 
 user : Github
 username : str
-ghiblog : Repository
+blogrepo : Repository
 cur_time : str
 blogname : str
 
 def login():
-    global user, username, blogname, ghiblog
+    global user, username, blogname, blogrepo
     github_repo_env = os.environ.get('GITHUB_REPOSITORY')
 
     username = github_repo_env[0:github_repo_env.index('/')]
     blogname = github_repo_env[github_repo_env.index('/'):]
     password = os.environ.get('GITHUB_TOKEN')
     user = Github(username, password)
-    ghiblog = user.get_repo(os.environ.get('GITHUB_REPOSITORY'))
-    print(ghiblog)
+    blogrepo = user.get_repo(os.environ.get('GITHUB_REPOSITORY'))
+    print(blogrepo)
 
 
 def bundle_summary_section():
-    global ghiblog
+    global blogrepo
     global cur_time
     global user
     global username
@@ -49,7 +49,7 @@ def bundle_summary_section():
 
 def format_issue(issue: Issue):
     return '- [%s](%s)  %s  \t \n' % (
-        issue.title, issue.html_url, '[%s 条评论]' % issue.comments)
+        issue.title, issue.html_url, ' - %s' % issue.created_at)
 
 
 def update_readme_md_file(contents):
@@ -58,44 +58,12 @@ def update_readme_md_file(contents):
         f.flush()
         f.close()
 
-def format_issue_with_labels(issue: Issue):
-    global user, username, blogname
-
-    labels = issue.get_labels()
-    labels_str = ''
-
-    for label in labels:
-        labels_str += '[%s](https://github.com/%s/%s/labels/%s), ' % (
-            label.name, username, blogname, urllib.parse.quote(label.name))
-    if '---' in issue.body:
-        body_summary = issue.body[:issue.body.index('---')]
-    else:
-        body_summary = issue.body[:150]
-        # 如果前150个字符中有代码块，则在 150 个字符中重新截取代码块之前的部分作为 summary
-        if '```' in body_summary:
-            body_summary = body_summary[:body_summary.index('```')]
-
-    return '''
-        #### [{0}]({1}) {2} \t {3}
-        
-        :label: : {4}
-        
-        {5}
-        
-        [更多>>>]({1})
-        
-        ---
-        
-        '''.format(issue.title, issue.html_url, '[%s 条评论]' % issue.comments, issue.created_at, labels_str[:-2],
-                   body_summary)
-
-
 def bundle_list_by_labels_section():
-    global ghiblog
+    global blogrepo
     global user
 
     # word cloud
-    wordcloud_image_url = WordCloudGenerator(ghiblog).generate()
+    wordcloud_image_url = WordCloudGenerator(blogrepo).generate()
 
     list_by_labels_section = """
 <summary>
@@ -103,11 +71,11 @@ def bundle_list_by_labels_section():
 </summary>  
 """ % (wordcloud_image_url)
 
-    all_labels = ghiblog.get_labels()
+    all_labels = blogrepo.get_labels()
     for label in all_labels:
         temp = ''
         count = 0
-        issues_in_label = ghiblog.get_issues(labels=(label,),state="open")
+        issues_in_label = blogrepo.get_issues(labels=(label,),state="open")
         for issue in issues_in_label:
             temp += format_issue(issue)
             count += 1
