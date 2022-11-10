@@ -6,7 +6,6 @@ from github.Issue import Issue
 from github.Repository import Repository
 import os
 import time
-import urllib.parse
 import codecs
 from word_cloud import WordCloudGenerator
 
