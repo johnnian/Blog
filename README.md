@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2022-11-10 13:45:20"/>
+    <img src="https://badgen.net/badge/last-commit/2022-11-10 13:58:37"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -169,8 +169,9 @@
 </details>
             
 <details open>
-<summary>Tools	[16篇文章]</summary>
+<summary>Tools	[17篇文章]</summary>
 
+- [使用Github Issues 与 Github Actions写技术博客](https://github.com/johnnian/Blog/issues/74)   - 2022-11-10 13:58:11  	 
 - [开发工具系列之—GoAcess:Nginx日志分析利器](https://github.com/johnnian/Blog/issues/68)   - 2019-07-23 03:15:36  	 
 - [开发工具系列之—pyenv：python版本切换](https://github.com/johnnian/Blog/issues/61)   - 2019-04-01 09:05:06  	 
 - [开发工具系列之— Macos下homebrew更新慢问题的解决](https://github.com/johnnian/Blog/issues/60)   - 2019-03-28 06:40:44  	 
