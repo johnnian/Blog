@@ -66,7 +66,7 @@ def bundle_list_by_labels_section():
 
     list_by_labels_section = """
 <summary>
-    <img src="%s" title="词云" alt="词云">
+    <img src="%s" title="词云" alt="词云" href="https://johnnian.github.io/Blog/">
 </summary>  
 """ % (wordcloud_image_url)
 
