@@ -22,12 +22,12 @@
 <details open>
 <summary>Databases	[6篇文章]</summary>
 
-- [H2数据库集群搭建(主从结构)](https://github.com/johnnian/Blog/issues/26)  [0 条评论]  	 
-- [H2数据库安装与使用(单点)](https://github.com/johnnian/Blog/issues/24)  [2 条评论]  	 
-- [生产环境部署Redis Cluster集群](https://github.com/johnnian/Blog/issues/9)  [0 条评论]  	 
-- [MongoDB 副本集部署-3.6版本](https://github.com/johnnian/Blog/issues/8)  [1 条评论]  	 
-- [Oracle 命令行小结](https://github.com/johnnian/Blog/issues/3)  [0 条评论]  	 
-- [Redis安装、配置及使用(单机版)](https://github.com/johnnian/Blog/issues/2)  [0 条评论]  	 
+- [H2数据库集群搭建(主从结构)](https://github.com/johnnian/Blog/issues/26)	 
+- [H2数据库安装与使用(单点)](https://github.com/johnnian/Blog/issues/24)	 
+- [生产环境部署Redis Cluster集群](https://github.com/johnnian/Blog/issues/9)  	 
+- [MongoDB 副本集部署-3.6版本](https://github.com/johnnian/Blog/issues/8)	 
+- [Oracle 命令行小结](https://github.com/johnnian/Blog/issues/3) 
+- [Redis安装、配置及使用(单机版)](https://github.com/johnnian/Blog/issues/2)	 
 
 
 </details>
