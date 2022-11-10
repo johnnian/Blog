@@ -49,7 +49,7 @@ def bundle_summary_section():
 
 def format_issue(issue: Issue):
     return '- [%s](%s)  %s  \t \n' % (
-        issue.title, issue.html_url, ' - %s' % issue.created_at)
+        issue.title, issue.html_url, ' - %s|%s评论' % (issue.created_at[0:10] , issue.comments))
 
 
 def update_readme_md_file(contents):
@@ -82,7 +82,7 @@ def bundle_list_by_labels_section():
         if count > 0:
             list_by_labels_section += '''
 <details open>
-<summary>%s\t[%s篇文章]</summary>
+<summary>%s\t[%s篇]</summary>
 
 %s
 
