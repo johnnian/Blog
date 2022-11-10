@@ -48,7 +48,7 @@ def bundle_summary_section():
 
 def format_issue(issue: Issue):
     return '- [%s](%s)  %s  \t \n' % (
-        issue.title, issue.html_url, ' - %s|%s评论' % (issue.created_at[0:10] , issue.comments))
+        issue.title, issue.html_url, ' - %s|%s评论' % (issue.created_at.strftime('%Y%m%d'), issue.comments))
 
 
 def update_readme_md_file(contents):
