@@ -47,8 +47,10 @@ def bundle_summary_section():
 
 
 def format_issue(issue: Issue):
-    return '- [%s](%s)  %s  \t \n' % (
-        issue.title, issue.html_url, ' - %s|%s评论' % (issue.created_at.strftime('%Y%m%d'), issue.comments))
+    return '- %s [%s](%s) \n' % (
+            issue.created_at.strftime('%Y-%m-%d'),
+            issue.title,
+            issue.html_url)
 
 
 def update_readme_md_file(contents):
@@ -60,15 +62,18 @@ def update_readme_md_file(contents):
 def bundle_list_by_labels_section():
     global blogrepo
     global user
+    global username
+    global blogname
+
 
     # word cloud
     wordcloud_image_url = WordCloudGenerator(blogrepo).generate()
 
     list_by_labels_section = """
 <summary>
-    <img src="%s" title="词云" alt="词云" href="https://johnnian.github.io/Blog/">
+    <img src="%s" title="词云" alt="词云" href="https://%s.github.io/%s/">
 </summary>  
-""" % (wordcloud_image_url)
+""" % (wordcloud_image_url,username,blogname)
 
     all_labels = blogrepo.get_labels()
     for label in all_labels:
