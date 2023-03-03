@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2023-03-02 06:46:34"/>
+    <img src="https://badgen.net/badge/last-commit/2023-03-03 02:57:19"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
