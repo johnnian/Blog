@@ -20,7 +20,6 @@ jobs:
       run: python3 main.py
     - name: config git info
       run: |
-        git config --global user.email "johnnian@126.com"
         git config --global user.name $GITHUB_TRIGGERING_ACTOR
     - name: commit change
       run: |
@@ -29,7 +28,6 @@ jobs:
         git commit -m "Update from Github Action"
     - name: push change
       env:
-        GITHUB_LOGIN: johnnian
         GITHUB_TOKEN: ${{ secrets.BLOG_SECRET }}
       run: |
         git push https://$GITHUB_TRIGGERING_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
