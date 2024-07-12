@@ -9,30 +9,30 @@ import time
 import codecs
 from word_cloud import WordCloudGenerator
 
-user : Github
-username : str
-blogrepo : Repository
-cur_time : str
-blogname : str
+user: Github
+user_name: str
+blog_repo: Repository
+cur_time: str
+blog_name: str
+
 
 def login():
-    global user, username, blogname, blogrepo
+    global user, user_name, blog_name, blog_repo
     github_repo_env = os.environ.get('GITHUB_REPOSITORY')
-
-    username = github_repo_env[0:github_repo_env.index('/')]
-    blogname = github_repo_env[github_repo_env.index('/'):]
+    user_name = github_repo_env[0:github_repo_env.index('/')]
+    blog_name = github_repo_env[github_repo_env.index('/'):]
     password = os.environ.get('GITHUB_TOKEN')
-    user = Github(username, password)
-    blogrepo = user.get_repo(os.environ.get('GITHUB_REPOSITORY'))
-    print(blogrepo)
+    user = Github(user_name, password)
+    blog_repo = user.get_repo(github_repo_env)
+    print(blog_repo)
 
 
 def bundle_summary_section():
-    global blogrepo
+    global blog_repo
     global cur_time
     global user
-    global username
-    global blogname
+    global user_name
+    global blog_name
 
     summary_section = '''
 <p align='center'>
@@ -42,15 +42,15 @@ def bundle_summary_section():
     <img src="https://badgen.net/github/stars/{0}/{1}"/>
     <img src="https://badgen.net/github/watchers/{0}/{1}"/>
 </p>
-    '''.format(username, blogname, cur_time)
+    '''.format(user_name, blog_name, cur_time)
     return summary_section
 
 
 def format_issue(issue: Issue):
     return '- %s [%s](%s) \n' % (
-            issue.created_at.strftime('%Y-%m-%d'),
-            issue.title,
-            issue.html_url)
+        issue.created_at.strftime('%Y-%m-%d'),
+        issue.title,
+        issue.html_url)
 
 
 def update_readme_md_file(contents):
@@ -59,27 +59,27 @@ def update_readme_md_file(contents):
         f.flush()
         f.close()
 
-def bundle_list_by_labels_section():
-    global blogrepo
-    global user
-    global username
-    global blogname
 
+def bundle_list_by_labels_section():
+    global blog_repo
+    global user
+    global user_name
+    global blog_name
 
     # word cloud
-    wordcloud_image_url = WordCloudGenerator(blogrepo).generate()
+    wordcloud_image_url = WordCloudGenerator(blog_repo).generate()
 
     list_by_labels_section = """
 <summary>
     <img src="%s" title="词云" alt="词云" href="https://%s.github.io/%s/">
 </summary>  
-""" % (wordcloud_image_url,username,blogname)
+""" % (wordcloud_image_url, user_name, blog_name)
 
-    all_labels = blogrepo.get_labels()
+    all_labels = blog_repo.get_labels()
     for label in all_labels:
         temp = ''
         count = 0
-        issues_in_label = blogrepo.get_issues(labels=(label,),state="open")
+        issues_in_label = blog_repo.get_issues(labels=(label,), state="open")
         for issue in issues_in_label:
             temp += format_issue(issue)
             count += 1
@@ -112,10 +112,11 @@ def execute():
     list_by_labels_section = bundle_list_by_labels_section()
     print(list_by_labels_section)
 
-    contents = [summary_section,list_by_labels_section]
+    contents = [summary_section, list_by_labels_section]
     update_readme_md_file(contents)
 
     print('README.md updated successfully!!!')
+
 
 if __name__ == '__main__':
     execute()

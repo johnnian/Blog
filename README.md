@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2023-03-03 02:57:19"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-12 21:21:38"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -31,6 +31,14 @@
 <summary>Blog	[1篇]</summary>
 
 - 2022-11-10 [使用Github Issues 与 Github Actions写技术博客](https://github.com/johnnian/Blog/issues/74) 
+
+
+</details>
+            
+<details open>
+<summary>bug	[1篇]</summary>
+
+- 2024-07-12 [Python3 Requests依赖报错-ImportError: urllib3 v2.0 only suports Openssl 1.1.1+](https://github.com/johnnian/Blog/issues/76) 
 
 
 </details>
@@ -131,8 +139,9 @@
 </details>
             
 <details open>
-<summary>Python	[3篇]</summary>
+<summary>Python	[4篇]</summary>
 
+- 2024-07-12 [Python3 Requests依赖报错-ImportError: urllib3 v2.0 only suports Openssl 1.1.1+](https://github.com/johnnian/Blog/issues/76) 
 - 2019-04-28 [Python系列之—Web脚手架(flask+gunicorn+守护进程)](https://github.com/johnnian/Blog/issues/63) 
 - 2019-04-01 [开发工具系列之—pyenv：python版本切换](https://github.com/johnnian/Blog/issues/61) 
 - 2018-11-16 [Connector/Python安装—使用Python连接MySQL](https://github.com/johnnian/Blog/issues/55) 
