@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:08:52"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:13:00"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -12,8 +12,9 @@
 </summary>  
 
 <details open>
-<summary>AI	[1篇]</summary>
+<summary>AI	[2篇]</summary>
 
+- 2024-07-12 [Python3 Requests依赖报错-ImportError: urllib3 v2.0 only suports Openssl 1.1.1+](https://github.com/johnnian/Blog/issues/76) 
 - 2019-09-22 [Keras入门—Hello,World](https://github.com/johnnian/Blog/issues/69) 
 
 
