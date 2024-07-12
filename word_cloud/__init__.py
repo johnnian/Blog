@@ -8,14 +8,15 @@ class WordCloudGenerator(object):
     def generate(self) -> str:
         if self._repo is None:
             print('self._repo is None')
-            return 'https://http.cat/500'
+            return ''
 
         frequencies = {}
 
         # get labels
         labels = self._repo.get_labels()
-
+        print(labels)
         for label in labels:
+            print(label)
             issues_in_label = self._repo.get_issues(labels=(label,))
             frequencies[label.name] = issues_in_label.totalCount
 
