@@ -19,6 +19,7 @@ class WordCloudGenerator(object):
             print(label)
             issues_in_label = self._repo.get_issues(labels=(label,))
             frequencies[label.name] = issues_in_label.totalCount
+            print(issues_in_label.totalCount)
 
         print(frequencies)
         # generate wordcount image to local dir
