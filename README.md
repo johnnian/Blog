@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:13:00"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:17:52"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -31,7 +31,7 @@
 <details open>
 <summary>Blog	[1篇]</summary>
 
-- 2022-11-10 [使用Github Issues 与 Github Actions写技术博客](https://github.com/johnnian/Blog/issues/74) 
+- 2022-11-10 [如何基于Github Issues与Github Actions写技术博客？](https://github.com/johnnian/Blog/issues/74) 
 
 
 </details>
@@ -182,7 +182,7 @@
 <summary>Tools	[18篇]</summary>
 
 - 2023-02-04 [【工具】快速方便下载Youtube的方法](https://github.com/johnnian/Blog/issues/75) 
-- 2022-11-10 [使用Github Issues 与 Github Actions写技术博客](https://github.com/johnnian/Blog/issues/74) 
+- 2022-11-10 [如何基于Github Issues与Github Actions写技术博客？](https://github.com/johnnian/Blog/issues/74) 
 - 2019-07-23 [开发工具系列之—GoAcess:Nginx日志分析利器](https://github.com/johnnian/Blog/issues/68) 
 - 2019-04-01 [开发工具系列之—pyenv：python版本切换](https://github.com/johnnian/Blog/issues/61) 
 - 2019-03-28 [开发工具系列之— Macos下homebrew更新慢问题的解决](https://github.com/johnnian/Blog/issues/60) 
