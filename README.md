@@ -1,13 +1,13 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:21:54"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:24:49"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
 </p>
 <p align='center'>
-    <a href="https://github.com/johnnian/Blog/issues/74">如果您FORK了本仓库，想要用于搭建您自己的技术博客，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
+    <a href="https://github.com/johnnian/Blog/issues/74">如果您Fork本仓库，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
 </p>
 
     
