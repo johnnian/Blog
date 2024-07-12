@@ -43,7 +43,7 @@ def bundle_summary_section():
     <img src="https://badgen.net/github/watchers/{0}/{1}"/>
 </p>
 <p align='center'>
-    <a href="https://github.com/johnnian/Blog/issues/74">如果您FORK了本仓库，想要用于搭建您自己的技术博客，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
+    <a href="https://github.com/johnnian/Blog/issues/74">如果您Fork本仓库，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
 </p>
 
     '''.format(user_name, blog_name, cur_time)
