@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-12 21:57:08"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:07:14"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -31,6 +31,14 @@
 <summary>Blog	[1篇]</summary>
 
 - 2022-11-10 [使用Github Issues 与 Github Actions写技术博客](https://github.com/johnnian/Blog/issues/74) 
+
+
+</details>
+            
+<details open>
+<summary>bug	[1篇]</summary>
+
+- 2024-07-12 [Python3 Requests依赖报错-ImportError: urllib3 v2.0 only suports Openssl 1.1.1+](https://github.com/johnnian/Blog/issues/76) 
 
 
 </details>
