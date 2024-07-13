@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:25:56"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-13 01:55:29"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -12,7 +12,7 @@
 
     
 <summary>
-    <img src="assets/wordcloud.png" title="词云" alt="词云" href="https://johnnian.github.io//Blog/">
+    <a href="https://johnnian.github.io//Blog/"><img src="assets/wordcloud.png" title="词云" alt="词云"></a>
 </summary>  
 
 <details open>
