@@ -75,9 +75,9 @@ def bundle_list_by_labels_section():
 
     list_by_labels_section = """
 <summary>
-    <img src="%s" title="词云" alt="词云" href="https://%s.github.io/%s/">
+    <a href="https://%s.github.io/%s/"><img src="%s" title="词云" alt="词云"></a>
 </summary>  
-""" % (wordcloud_image_url, user_name, blog_name)
+""" % (user_name, blog_name,wordcloud_image_url)
 
     all_labels = blog_repo.get_labels()
     for label in all_labels:
