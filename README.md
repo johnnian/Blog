@@ -1,7 +1,7 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-13 01:55:29"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-13 04:55:55"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
@@ -100,8 +100,9 @@
 </details>
             
 <details open>
-<summary>Linux	[12篇]</summary>
+<summary>Linux	[13篇]</summary>
 
+- 2024-07-13 [解决 curl:  Protocol "https" not supported or disabled in libcurl ](https://github.com/johnnian/Blog/issues/77) 
 - 2018-11-20 [ Redhat 6 ：This system is not registered to Red Hat Subscription Management](https://github.com/johnnian/Blog/issues/56) 
 - 2018-11-16 [Connector/Python安装—使用Python连接MySQL](https://github.com/johnnian/Blog/issues/55) 
 - 2018-05-14 [CentOS 7 安装JDK](https://github.com/johnnian/Blog/issues/53) 
