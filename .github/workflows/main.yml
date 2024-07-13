@@ -19,8 +19,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.BLOG_SECRET }}
       run: python3 main.py
     - name: config git info
+      env:
+        USERNAME: ${{ secrets.GIT_USERNAME }}
+        EMAIL: ${{ secrets.GIT_EMAIL }}
       run: |
-        git config --global user.name $GITHUB_TRIGGERING_ACTOR
+        git config --global user.name $USERNAME
+        git config --global user.email $EMAIL
     - name: commit change
       run: |
         git checkout master
@@ -28,8 +32,9 @@ jobs:
         git commit -m "Update from Github Action"
     - name: push change
       env:
+        USERNAME: ${{ secrets.GIT_USERNAME }}
         GITHUB_TOKEN: ${{ secrets.BLOG_SECRET }}
       run: |
-        git push https://$GITHUB_TRIGGERING_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+        git push https://$USERNAME:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
     - name: done
       run: echo 'done'
