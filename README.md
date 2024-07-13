@@ -1,13 +1,13 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:21:54"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-12 14:25:56"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
 </p>
 <p align='center'>
-    <a href="https://github.com/johnnian/Blog/issues/74">如果您FORK了本仓库，想要用于搭建您自己的技术博客，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
+    <a href="https://github.com/johnnian/Blog/issues/74">如果您Fork本仓库，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
 </p>
 
     
@@ -16,9 +16,8 @@
 </summary>  
 
 <details open>
-<summary>AI	[2篇]</summary>
+<summary>AI	[1篇]</summary>
 
-- 2024-07-12 [Python3 Requests依赖报错-ImportError: urllib3 v2.0 only suports Openssl 1.1.1+](https://github.com/johnnian/Blog/issues/76) 
 - 2019-09-22 [Keras入门—Hello,World](https://github.com/johnnian/Blog/issues/69) 
 
 
