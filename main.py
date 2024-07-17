@@ -44,6 +44,7 @@ def bundle_summary_section():
 </p>
 <p align='center'>
     <a href="https://github.com/johnnian/Blog/issues/74">如果您Fork本仓库，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
+    <a href="https://letgovoc.cn">TIPS：新开设了一个博客，计划输出产品技术系列主题内容，欢迎点击访问</a>
 </p>
 
     '''.format(user_name, blog_name, cur_time)
