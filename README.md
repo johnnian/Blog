@@ -1,13 +1,13 @@
 
 <p align='center'>
     <img src="https://badgen.net/github/issues/johnnian//Blog"/>
-    <img src="https://badgen.net/badge/last-commit/2024-07-17 14:53:56"/>
+    <img src="https://badgen.net/badge/last-commit/2024-07-18 05:31:55"/>
     <img src="https://badgen.net/github/forks/johnnian//Blog"/>
     <img src="https://badgen.net/github/stars/johnnian//Blog"/>
     <img src="https://badgen.net/github/watchers/johnnian//Blog"/>
 </p>
 <p align='center'>
-    <a href="https://github.com/johnnian/Blog/issues/74">如果您Fork本仓库，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a>
+    <a href="https://github.com/johnnian/Blog/issues/74">如果您Fork本仓库，请先阅读：如何基于Github Issues与Github Actions写技术博客？</a><br/>
     <a href="https://letgovoc.cn">TIPS：新开设了一个博客，计划输出产品技术系列主题内容，欢迎点击访问</a>
 </p>
 
